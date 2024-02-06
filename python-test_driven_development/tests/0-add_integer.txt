@@ -1,0 +1,39 @@
+Addition Function Documentation
+===============================
+
+This file contains tests for the addition function.
+
+Usage:
+------
+To use the addition function, call it with two integers as arguments.
+
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(100, "school")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("Nassim", 55)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer('a')
+Traceback (most recent call last):
+TypeError: a must be an integer
