@@ -1,0 +1,47 @@
+say_my_name Function Documentation
+===============================
+
+This file contains tests for the say_my_name function
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say_my_name(16)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(16, "Nassim")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Nassim", 30)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Bob", "Marley")
+My name is Bob Marley
+
+>>> say_my_name("Bob")
+My name is Bob
+
+>>> say_my_name("Nassim", "Abaida", "James")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(16, 16)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("M@ria", "González Pérez")
+My name is M@ria González Pérez
+
+>>> say_my_name("Walter", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Walter", ["White"])
+Traceback (most recent call last):
+TypeError: last_name must be a string
