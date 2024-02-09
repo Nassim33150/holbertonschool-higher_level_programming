@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""Square Class
-
-defining the square
-
-"""
+"""defines a Rectangle"""
 
 
 class Rectangle:
-
+    """Rectangle class"""
     pass
