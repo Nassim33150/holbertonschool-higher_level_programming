@@ -32,7 +32,9 @@ class TestMaxInteger(unittest.TestCase):
     
     def test_one_float(self):
         self.assertEqual(max_integer([10.5]), 10.5)
-
+    
+    def test_max_in_the_middle(self):
+        self.assertEqual(max_integer([2, 1, 8, 3, 4]), 8)
 
         
 
