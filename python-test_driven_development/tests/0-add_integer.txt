@@ -19,7 +19,14 @@ To use the addition function, call it with two integers as arguments.
 >>> add_integer(2)
 100
 
->>> add_integer(100.3, -2)
+>>> add_integer(100.3, 10.3)
+110
+
+>>> add_integer(100.3, 10.3, 9.5)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+>>> add_integer(100.3, 10.3)
 98
 
 >>> add_integer(100, "school")
