@@ -1,0 +1,5 @@
+>>> print_sorted: = __import__('1-my_list').Mylist().print_sorted
+
+>>> x = Mylist()
+>>> type(x) == Mylist
+True
