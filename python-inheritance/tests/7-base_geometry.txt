@@ -67,7 +67,18 @@ TypeError: BaseGeometry.integer_validator() missing 2 required positional argume
 >>> type(BaseGeometry.__dict__['area'])
 <class 'function'>'
 
-integer_validator method None value:
 >>> bg.integer_validator("Nas", None)
+Traceback (most recent call last):
+TypeError: Nas must be an integer
+
+>>> bg.integer_validator("", 1)
+
+>>> bg.integer_validator(None, 3)
+
+>>> bg.integer_validator("Nass", (2, 2))
+Traceback (most recent call last):
+TypeError: Nass must be an integer
+
+>>> bg.integer_validator("Nas", {5, 10})
 Traceback (most recent call last):
 TypeError: Nas must be an integer
