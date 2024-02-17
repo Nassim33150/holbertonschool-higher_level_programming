@@ -9,11 +9,13 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if attrs is None:
-            return self.__dict__
-        elif isinstance(attrs, list) and
-        all(isinstance(attr, str) for attr in attrs):
-            return
-            {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
-        else:
-            return self.__dict__
+        ''' Method that returns directory description with filter '''
+
+        if isinstance(attrs, list) and all(isinstance(attr, str)
+                                           for attr in attrs):
+            at = {}
+            for i in attrs:
+                if i in self.__dict__:
+                    at[i] = self.__dict__[i]
+            return at
+        return self.__dict__
