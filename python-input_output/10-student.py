@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" function that retrieves a dictionnary representation for JSON """
 
 
 class Student:
