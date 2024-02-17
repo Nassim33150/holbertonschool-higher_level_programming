@@ -7,5 +7,5 @@ def class_to_json(obj):
     with simple data structure """
     structure = {}
     if hasattr(obj, "__dict__"):
-        strucutre = obj.__dict__.copy()
+        structure = obj.__dict__.copy()
     return structure
