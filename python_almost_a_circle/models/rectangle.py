@@ -45,7 +45,7 @@ class Rectangle(Base):
 
     @x.setter
     def set_x(self, value):
-        if is not instance(x, int):
+        if not instance(x, int):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be > 0")
@@ -57,8 +57,11 @@ class Rectangle(Base):
 
     @y.setter
     def set_y(self, value):
-        if is not instance(y, int):
+        if not instance(y, int):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be > 0")
         self.__y = value
+
+    def area(self):
+        return self.__width * self.__height
