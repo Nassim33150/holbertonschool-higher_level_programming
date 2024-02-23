@@ -39,18 +39,14 @@ class Base:
         js = json.dumps(list_dictionaries)
         return js
 
+    @classmethod
     def save_to_file(cls, list_objs):
-        """ save serialization to file """
-        def save_to_file(cls, list_objs):
-            if list_objs is None:
-                list_objs = []
+        """ Save serialization to file """
+        if list_objs is None:
+            list_objs = []
         filename = cls.__name__ + ".json"
         with open(filename, 'w') as file:
-            file.write(
-                cls.to_json_string(
-                    [obj.to_dictionary() for obj in list_objs]
-                    )
-                )
+            file.write(cls.to_json_string([obj.to_dictionary() for obj in list_objs]))
 
     def from_json_string(json_string):
         """deserialization"""
@@ -58,3 +54,8 @@ class Base:
             return []
         object = json.loads(json_string)
         return object
+
+    def create(cls, **dictionary):
+        dummy_instance = cls(1, 1)
+        dummy_instance.update(**dictionary)
+        return dummy_instance
