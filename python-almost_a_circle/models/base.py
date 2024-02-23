@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+""" Creates a class """
 import json
 import csv
 import os.path
-""" Creates a class """
 
 
 class Base:
+    """ Class Base """
     __nb_objects = 0
 
     def __init__(self, id=None):
