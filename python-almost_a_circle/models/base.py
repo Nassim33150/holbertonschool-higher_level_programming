@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Creates a class """
 import json
 import csv
 import os.path
+""" Creates a class """
 
 
 class Base:
