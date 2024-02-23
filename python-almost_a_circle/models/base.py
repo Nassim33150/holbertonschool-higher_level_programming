@@ -33,12 +33,14 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
+        """test requierement"""
         if list_dictionaries is None:
             return "[]"
         js = json.dumps(list_dictionaries)
         return js
 
     def save_to_file(cls, list_objs):
+        """test requierement"""
         def save_to_file(cls, list_objs):
             if list_objs is None:
                 list_objs = []
@@ -51,6 +53,7 @@ class Base:
                 )
 
     def from_json_string(json_string):
+        """test requierement"""
         if json_string is None or json_string == "":
             return []
         object = json.loads(json_string)
