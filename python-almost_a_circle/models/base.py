@@ -24,7 +24,7 @@ class Base:
         None
 
     Returns:
-        None
+        None.
     """
         if id is not None:
             self.id = id
