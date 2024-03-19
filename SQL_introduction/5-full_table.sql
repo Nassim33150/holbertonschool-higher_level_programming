@@ -1,2 +1,2 @@
--- Retrieve all records from the 'first_table' table
-SELECT * FROM first_table;
+-- Prints full description of first_table
+SHOW CREATE table first_table;
