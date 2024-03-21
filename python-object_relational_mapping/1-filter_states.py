@@ -16,13 +16,12 @@ if __name__ == "__main__":
 
     cur = database.cursor()
 
-    req = 'SELECT * FROM states'
+    req = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id"
     cur.execute(req)
 
     citieslist = cur.fetchall()
 
     for city in citieslist:
-        if city[1].startswith('N'):
-            print(city)
+        print(city)
     cur.close()
     database.close()
