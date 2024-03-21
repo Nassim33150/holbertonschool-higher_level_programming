@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import MySQLdb
 import sys
 """ takes in an argument and displays all values in the
