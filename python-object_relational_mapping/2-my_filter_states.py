@@ -18,8 +18,10 @@ if __name__ == "__main__":
 
     state = sys.argv[4]
 
-    req = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-    cur.execute(req, (state,))
+    req = """SELECT * FROM states WHERE name LIKE BINARY '{}'
+    ORDER BY id ASC """.format(sys.argv[4])
+
+    cur.execute(req)
 
     citieslist = cur.fetchall()
 
