@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     cur = database.cursor()
 
-    req = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id"
+    req = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id"
     cur.execute(req)
 
     citieslist = cur.fetchall()
